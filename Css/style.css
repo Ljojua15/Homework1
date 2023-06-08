@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: croco-sand-caps;
+    src: url('../fonts/CrocoSans-Black_CAPS.woff');
+  }
+  
+  @font-face {
+    font-family: proxima-nova;
+    src: url('../fonts/ProximaNova-Text.woff');
+  }
+  
 /* /* body {
     overflow-y: hidden;
 }
@@ -13,31 +24,62 @@
     width: 100%;
 }
  */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+ 
+  *{
+    font-weight: 900;
+  }
 
 body {
     background-color: aquamarine;
-    /* background-image: url(/Image/bgGe.jpg); */
+    background-image: url(/Image/bgGe.jpg);
     background-size: cover;
-    background-position: inherit;
+    background-position: top;
     background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: auto; */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow-y: scroll;
     text-align: center;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+
+
+    
 }
 
 .main-container {
+    padding: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: 20%;
-    width: 80%;
-    height: 80%;
+    justify-content: space-around;
+    margin:20%;
+    width: 100%;
+    height: 150vh;
 }
 
 .min-deposit {
@@ -46,9 +88,9 @@ body {
     align-items: center;
     width: 600px;
     height: 70px;
-    border: 8px solid yellow;
+    border: 8px solid #d79e3d;
     border-radius: 15px;
-    background-color: brown;
+    background-color: #4d3a5e;
 }
 
 .in-text {
@@ -56,10 +98,11 @@ body {
 }
 
 .text-freespins {
+    min-width: 135%;
     font-size: 30px;
 }
 
-.yellow {
+.span1 {
     color: yellow;
 }
 
@@ -68,11 +111,154 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 120%;
     height: 80px;
-    background-color: grey;
-    border: 2px solid red;
-    border-radius: 13px;
+    background-color: rgba(21, 15, 26, 0.7);
+    border: 1px solid rgba(21, 15, 26, 0.7);;
+    border-radius: 15px;
+}
+.in-text2{
+    font-size: 18px;
+}
+.reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #15af44;
+    color: #fff;cursor: pointer;
+}
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+#aris{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+    width: 135%;
 }
 
-.reg {}
+.min-free , .max-free{
+    width: 350px;
+    height: 100px;
+    background-image: url(/Image/Rectangle-4.png);
+    border: 4px solid #fee770;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.span2, .span2{
+    font-size: 30px;
+}
+.second-text{
+    line-height: 33px;
+    font-size: 25px;
+    font-family: croco-sand-caps, sans-serif;
+    text-align: center; 
+}
+/* .span4{
+    margin-bottom: 200px;
+} */
+
+/* game-zone */
+
+.play-zone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 120%;
+    height: 400px;
+    background-image: url(../Image/Back-shape.jpg);
+    border: 5px solid #fff;
+    border-radius: 30px;
+}
+.text-zone{
+    width: 100%;
+    font-size: 30px;
+}
+.game-zone{
+    width: 100%;
+    min-height: 150px;
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.slot,.casino,.ufo{
+    font-family: croco-sand-caps, sans-serif;
+    width: 260px;
+    height: 155px;
+    cursor: pointer;
+  
+}
+.slot{
+    background-image: url(/Image/სლოტი.png);   
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.casino{
+    background-image: url(/Image/კაზინო.png);   
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.ufo{
+    background-image: url(/Image/ufo.png);   
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cash-out{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; */
+    /* justify-content: center; */
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background-color: #000;
+    background-image: url(../Image/Rectangle-8-p-500.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid #fee770;
+    border-radius: 50px;
+}
+.cash-out-info{
+    position: absolute;
+    top: 30%;
+    transform: translateX(30%); 
+}
+.cash-out-text1{
+    font-family: croco-sand-caps, sans-serif;
+    font-size: 18px;
+}
+.cash-out-text2{
+    font-family: croco-sand-caps, sans-serif;
+    font-size: 35px;
+}
+.cash-out-text3{
+    font-family: croco-sand-caps, sans-serif;
+    font-size: 22px;
+}
